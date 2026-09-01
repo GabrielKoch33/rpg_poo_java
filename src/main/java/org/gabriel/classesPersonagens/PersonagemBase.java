@@ -1,4 +1,15 @@
 package org.gabriel.classesPersonagens;
 
-public class PersonagemBase {
+abstract class PersonagemBase {
+    private int vida;
+    private int resistencia;
+    private int resistenciaMagia;
+    private int mana;
+    private String buffNome;
+    private double buffPorcentagem;
+    private int espacosInventario;
+
+    protected abstract int ataque();
+
+
 }
