@@ -1,17 +1,18 @@
 package org.gabriel.classesMecanicas;
 
 public class Inventario {
-    final private int iSlots;
-    private Item[] inventory;
+    private final int slots;
+    private final Item[] inventory;
     private int sumWeigth;
 
-    public Inventario(int iMaxSlots){
-        this.iSlots = iMaxSlots;
-        inventory = new Item[iMaxSlots];
+    public Inventario(int maxSlots){
+        this.slots = maxSlots;
+        inventory = new Item[maxSlots];
+        this.sumWeigth = 0;
     }
 
     public int getInventorySlots() {
-        return this.iSlots;
+        return this.slots;
     }
 
     public boolean addItem(Item item) {
@@ -25,7 +26,7 @@ public class Inventario {
     }
 
     public boolean isFull() {
-        if (this.sumWeigth == this.iSlots) {
+        if (this.sumWeigth == this.slots) {
             System.out.println("Inventário cheio! Venda alguns itens");
             return true;
         }

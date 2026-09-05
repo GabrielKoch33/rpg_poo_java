@@ -3,106 +3,86 @@ package org.gabriel.classesPersonagens;
 import org.gabriel.classesMecanicas.Inventario;
 
 public class PersonagemBase {
-    private int     iLife;
-    private int     iDefense;
-    private int     iDamage;
-    private int     iMagicDefense;
-    private int     iManna;
-    private String  sBuffName;
-    private double  dBuffPercentage;
-    private double  dMoney;
-    private Inventario oInventario;
-
-    public void setLife(int life) {
-        this.iLife = life;
-    }
-
-    public void setDefense(int defense) {
-        this.iDefense = defense;
-    }
-
-    public void setDamage(int damage) {
-        this.iDamage = damage;
-    }
-
-    public void setMagicDefense(int magicDefense) {
-        this.iMagicDefense = magicDefense;
-    }
-
-    public void setManna(int manna) {
-        this.iManna = manna;
-    }
-
-    public void setBuffName(String buffName) {
-        this.sBuffName = buffName;
-    }
-
-    public void setBuffPercentage(double dBuffPercentage) {
-        this.dBuffPercentage = dBuffPercentage;
-    }
-
-    public void setMoney(double dMoney) {
-        this.dMoney = dMoney;
-    }
-
-    public void setInventorySlots(int inventorySlot) {
-        this.oInventario = new Inventario(1000);
-    }
+    private int     life;
+    private int     defense;
+    private int     damage;
+    private int     magicDefense;
+    private int     manna;
+    private String  buffName;
+    private double  buffPercentage;
+    private double  money;
+    private Inventario inventory;
 
     public int getLife() {
-        return this.iLife;
+        return life;
+    }
+
+    public void setLife(int life) {
+        this.life = life;
     }
 
     public int getDefense() {
-        return this.iDefense;
+        return defense;
+    }
+
+    public void setDefense(int defense) {
+        this.defense = defense;
     }
 
     public int getDamage() {
-        return this.iDamage;
+        return damage;
+    }
+
+    public void setDamage(int damage) {
+        this.damage = damage;
     }
 
     public int getMagicDefense() {
-        return this.iMagicDefense;
+        return magicDefense;
+    }
+
+    public void setMagicDefense(int magicDefense) {
+        this.magicDefense = magicDefense;
     }
 
     public int getManna() {
-        return this.iManna;
+        return manna;
+    }
+
+    public void setManna(int manna) {
+        this.manna = manna;
     }
 
     public String getBuffName() {
-        return this.sBuffName;
+        return buffName;
+    }
+
+    public void setBuffName(String buffName) {
+        this.buffName = buffName;
     }
 
     public double getBuffPercentage() {
-        return this.dBuffPercentage;
+        return buffPercentage;
+    }
+
+    public void setBuffPercentage(double buffPercentage) {
+        this.buffPercentage = buffPercentage;
     }
 
     public double getMoney() {
-        return this.dMoney;
+        return money;
     }
 
-    public int getInventorySlots() {
-        return this.oInventario.getInventorySlots();
+    public void setMoney(double money) {
+        this.money = money;
     }
 
-//    protected int attack(){
-//
-//    }
-//
-//    protected int spendManna(){
-//
-//    }
-//
-//    protected double useBuff(){
-//
-//    }
-//
-//    protected int reduceInventorySlots(){
-//
-//    }
-//
-//    protected int increaseInventorySlots(){
-//
-//    }
+    public Inventario getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventario inventory) {
+        this.inventory = new Inventario(30);
+    }
 }
 

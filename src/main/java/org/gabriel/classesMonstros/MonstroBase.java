@@ -1,72 +1,76 @@
 package org.gabriel.classesMonstros;
 
 public class MonstroBase {
-    private int     iLife;
-    private int     iDefense;
-    private int     iDamage;
-    private int     iMagicDefense;
-    private int     iManna;
-    private String  sDebuffName;
-    private double  dDebuffPercentage;
-    private boolean bIsBoss;
+    private int     life;
+    private int     defense;
+    private int     damage;
+    private int     magicDefense;
+    private int     manna;
+    private String  debuffName;
+    private double  debuffPercentage;
+    private boolean isBoss;
 
-    public void setLife(int life){
-        this.iLife = life;
-    }
-    public void setDefense(int defense){
-        this.iDefense = defense;
-    }
-    public void setDamage(int damage){
-        this.iDamage = damage;
-    }
-    public void setMagicDefense(int magicDefense){
-        this.iMagicDefense = magicDefense;
+    public int getLife() {
+        return life;
     }
 
-    public void setManna(int manna){
-        this.iManna = manna;
+    public void setLife(int life) {
+        this.life = life;
     }
 
-    public void setDebuffName(String debuffName){
-        this.sDebuffName = debuffName;
+    public int getDefense() {
+        return defense;
     }
 
-    public void setDebuffPercentage(double debuffPercentage){
-        this.dDebuffPercentage = debuffPercentage;
+    public void setDefense(int defense) {
+        this.defense = defense;
     }
 
-    public void setBoss(boolean statusBoss){
-        this.bIsBoss = statusBoss;
+    public int getDamage() {
+        return damage;
     }
 
-    public int getLife(){
-        return this.iLife;
+    public void setDamage(int damage) {
+        this.damage = damage;
     }
 
-    public int getDefense(){
-        return this.iDefense;
-    }
-    public int getDamage(){
-        return this.iDamage;
+    public int getMagicDefense() {
+        return magicDefense;
     }
 
-    public int getMagicDefense(){
-        return this.iMagicDefense;
+    public void setMagicDefense(int magicDefense) {
+        this.magicDefense = magicDefense;
     }
 
-    public int getManna(){
-        return this.iManna;
+    public int getManna() {
+        return manna;
     }
 
-    public String getDebuffName(){
-        return this.sDebuffName;
+    public void setManna(int manna) {
+        this.manna = manna;
     }
 
-    public double getDebuffPercentage(){
-        return this.dDebuffPercentage;
+    public String getDebuffName() {
+        return debuffName;
     }
 
-    public boolean getBoss(){
-        return this.bIsBoss;
+    public void setDebuffName(String debuffName) {
+        this.debuffName = debuffName;
+    }
+
+    public double getDebuffPercentage() {
+        return debuffPercentage;
+    }
+
+    public void setDebuffPercentage(double debuffPercentage) {
+        this.debuffPercentage = debuffPercentage;
+    }
+
+    public boolean isBoss() {
+        return isBoss;
+    }
+
+    public void setBoss(boolean boss) {
+        isBoss = boss;
     }
 }

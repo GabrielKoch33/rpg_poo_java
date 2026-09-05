@@ -1,58 +1,58 @@
 package org.gabriel.classesMecanicas;
 
 public class Item {
-    private String sName;
-    private String sType;
-    private int iWeight;
-    private double dCost;
-    private int iNumberOfMaxUses;
-    private boolean bIsDefault;
+    private String name;
+    private String type;
+    private int weight;
+    private double cost;
+    private int numberOfMaxUses;
+    private boolean isDefault;
 
-    public void setName(String sName) {
-        this.sName = sName;
+    public String getName() {
+        return name;
     }
 
-    public void setType(String sType) {
-        this.sType = sType;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setWeight(int iWeight) {
-        this.iWeight = iWeight;
+    public String getType() {
+        return type;
     }
 
-    public void setCost(double dCost) {
-        this.dCost = dCost;
-    }
-
-    public void setNumberOfMaxUses(int iNumberOfMaxUses) {
-        this.iNumberOfMaxUses = iNumberOfMaxUses;
-    }
-
-    public void setIsDefault(boolean bIsDefault) {
-        this.bIsDefault = bIsDefault;
-    }
-
-    public String getsName() {
-        return this.sName;
-    }
-
-    public String getsType() {
-        return this.sType;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public int getWeight() {
-        return this.iWeight;
+        return weight;
     }
 
-    public int getNumberOfMaxUses() {
-        return this.iNumberOfMaxUses;
-    }
-
-    public boolean getIsDefault() {
-        return this.bIsDefault;
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
     public double getCost() {
-        return this.dCost;
+        return cost;
+    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+
+    public int getNumberOfMaxUses() {
+        return numberOfMaxUses;
+    }
+
+    public void setNumberOfMaxUses(int numberOfMaxUses) {
+        this.numberOfMaxUses = numberOfMaxUses;
+    }
+
+    public boolean getIsDefault() {
+        return isDefault;
+    }
+
+    public void setDefault(boolean isDefault) {
+        this.isDefault = isDefault;
     }
 }
