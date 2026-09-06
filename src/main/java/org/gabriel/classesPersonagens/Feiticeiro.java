@@ -1,4 +1,4 @@
 package org.gabriel.classesPersonagens;
 
-public class Curandeiro {
+public class Feiticeiro {
 }

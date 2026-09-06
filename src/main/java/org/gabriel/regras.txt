@@ -1,0 +1,43 @@
+PERSONAGENS (HERÓIS):
+    - Todas as classes de heróis herdam os atributos da classe PersonagemBase
+        - Provavelmente irão usar o construtor da classe pai (super)
+        - Arqueiro: + velocidade de ataque;
+        - Bandido: + velocidade de esquiva;
+        - Feiticeiro: + resistência mágica;
+        - Guerreiro: + da mais dano;
+
+    - Todas as classes de inimigos herdam os atributos da classe MonstroBase
+        - Provavelmente irão usar o construtor da classe pai (super)
+        - Lacaios: personagens sem muitas capacidades únicas
+        - Brutão: mais resistência a ataques físicos, fraco a ataques mágicos
+        - Mago: possuirá ataques de magia e resistência a magia elevados
+        - Chefe: terá mais vida, debuffs, ataques mágicos e físicos.
+
+    - Itens
+        - O tipo de itens define se são de ataque físico ou mágico
+        - O peso define quantos slots o item ocupa
+        - O custo define o quanto ele vale em uma loja de vendas
+        - O numberOfMaxUses define quantas vezes o item pode ser usado antes de
+        excluído da mochila do jogador
+        - IsDefault define se o item pode ser vendido ou não, ademais, cada personagem
+        possui um item inicial, seja um arco, cajado, espada, adaga...
+        - Itens defaults terão uso ilimitados (basicamente durabilidade infinita)
+        - Haverá uma mecânica de descartar item, o jogador perderá o item e não
+        ganhará nenhum dinheiro em troca, apenas liberará espaço.
+        - Quando o maxUses de um item chegar a 0, o item será descartado inventário
+        liberando espaço.
+
+    - Loja
+        - Lojas possuirão itens únicos.
+        - Cada item possui um preço associado, o qual será o valor de compra
+        - Ao adentrar a loja os itens serão exibidos
+        - Ao comprar um item, o item deve sumir da loja.
+        - Haverá uma mecânica de vender itens, dessa forma o jogador pode
+        ganhar dinheiro e liberar espaço ao mesmo tempo.
+
+    - Inventário
+        - Todo personagem irá iniciar com um inventário.
+        - Ainda pensando se o tamanho será fixo, acho que sim.
+        - Quando o peso do inventário for igual ao tamanho do mesmo, o jogador
+        não poderá comprar mais itens.
+    -

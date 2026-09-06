@@ -5,8 +5,22 @@ public class Item {
     private String type;
     private int weight;
     private double cost;
-    private int numberOfMaxUses;
+    private int numberOfMaxUses = 10000;
     private boolean isDefault;
+
+    /**Caso queiramos definir um número máximo de usos utilizamos esse construtor*/
+    public Item(String name, String type, int weight, double cost, boolean isDefault,int numberOfMaxUses){
+        this(name, type, weight, cost, isDefault);
+        this.numberOfMaxUses = numberOfMaxUses;
+    }
+    /**Caso o número de usos seja infinito, utilizamos esse*/
+    public Item(String name, String type, int weight, double cost, boolean isDefault){
+        this.name = name;
+        this.type = type;
+        this.weight = weight;
+        this.cost = cost;
+        this.isDefault = isDefault;
+    }
 
     public String getName() {
         return name;

@@ -6,8 +6,8 @@ public class Inventario {
     private int sumWeigth;
 
     public Inventario(int maxSlots){
-        this.slots = maxSlots;
-        inventory = new Item[maxSlots];
+        this.slots     = maxSlots;
+        this.inventory = new Item[maxSlots];
         this.sumWeigth = 0;
     }
 

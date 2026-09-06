@@ -13,6 +13,8 @@ public class PersonagemBase {
     private double  money;
     private Inventario inventory;
 
+
+
     public int getLife() {
         return life;
     }
