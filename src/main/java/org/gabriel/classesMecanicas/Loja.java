@@ -2,7 +2,6 @@ package org.gabriel.classesMecanicas;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public class Loja {
     /**Integer: será como um índice do item, uma forma rápida de acessar o item desejado. <br>

@@ -7,20 +7,22 @@ public class Item {
     private int peso;
     private double preco;
     private int numeroDeUsos = 9999;
-    private boolean isDefault;
+    private boolean isDefault = false;
 
-    /**Caso queiramos definir um número máximo de usos utilizamos esse construtor*/
-    public Item(String nome, String tipo, int peso, double preco, boolean isDefault,int numeroDeUsos){
-        this(nome, tipo, peso, preco, isDefault);
+    /**Caso queiramos definir um número máximo de usos e que o item seja permanente do personagem utilizamos esse construtor*/
+    public Item(String nome, String descricao, String tipo, int peso, double preco, int numeroDeUsos, boolean isDefault ){
+        this(nome, descricao ,tipo, peso, preco);
         this.numeroDeUsos = numeroDeUsos;
+        this.isDefault = isDefault;
+
     }
-    /**Caso o número de usos seja 'infinito', utilizamos esse*/
-    public Item(String nome, String tipo, int peso, double preco, boolean isDefault){
+    /**Caso o número de usos seja 'infinito' ou os itens não são 'defaults', utilizamos esse*/
+    public Item(String nome, String descricao,String tipo, int peso, double preco){
         this.nome = nome;
+        this.descricao = descricao;
         this.tipo = tipo;
         this.peso = peso;
         this.preco = preco;
-        this.isDefault = isDefault;
     }
 
     public String getNome() {
