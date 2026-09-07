@@ -74,15 +74,19 @@ Loja
         - Ao adentrar a loja os itens serão exibidos
         - Ao comprar um item, o item deve sumir da loja.
         - Haverá uma mecânica de vender itens, dessa forma o jogador pode ganhar dinheiro e liberar espaço ao mesmo tempo.
+        - Itens vendidos não aparecem no estoque da loja para comprar novamente.
+
     -> ATRIBUTOS:
         - HashMap<Integer, Item>  // Integer será o índice do item, 'Item' exibirá seus dados
-
+        - ultimaChaveCriada // controla o id dos itens da hashmap;
     -> MÉTODOS:
-        - Comprar item.
-        - Vender item.
-        - Ver estoque da loja.
-        - Ver descrição item.
-
+        - adicionaItemEstoque
+        - removeItemEstoque
+        - venderItem
+        - estaVazia
+        - contemItem
+        - comprarItem
+        - getEstoque
 
 Inventário
     -> REGRAS:
