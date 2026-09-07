@@ -1,72 +1,81 @@
 package org.gabriel.classesMecanicas;
 
 public class Item {
-    private String name;
-    private String type;
-    private int weight;
-    private double cost;
-    private int numberOfMaxUses = 10000;
+    private String nome;
+    private String descricao;
+    private String tipo;
+    private int peso;
+    private double preco;
+    private int numeroDeUsos = 9999;
     private boolean isDefault;
 
     /**Caso queiramos definir um número máximo de usos utilizamos esse construtor*/
-    public Item(String name, String type, int weight, double cost, boolean isDefault,int numberOfMaxUses){
-        this(name, type, weight, cost, isDefault);
-        this.numberOfMaxUses = numberOfMaxUses;
+    public Item(String nome, String tipo, int peso, double preco, boolean isDefault,int numeroDeUsos){
+        this(nome, tipo, peso, preco, isDefault);
+        this.numeroDeUsos = numeroDeUsos;
     }
-    /**Caso o número de usos seja infinito, utilizamos esse*/
-    public Item(String name, String type, int weight, double cost, boolean isDefault){
-        this.name = name;
-        this.type = type;
-        this.weight = weight;
-        this.cost = cost;
+    /**Caso o número de usos seja 'infinito', utilizamos esse*/
+    public Item(String nome, String tipo, int peso, double preco, boolean isDefault){
+        this.nome = nome;
+        this.tipo = tipo;
+        this.peso = peso;
+        this.preco = preco;
         this.isDefault = isDefault;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getType() {
-        return type;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
-    public int getWeight() {
-        return weight;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public double getCost() {
-        return cost;
+    public int getPeso() {
+        return peso;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
+    public void setPeso(int peso) {
+        this.peso = peso;
     }
 
-    public int getNumberOfMaxUses() {
-        return numberOfMaxUses;
+    public double getPreco() {
+        return preco;
     }
 
-    public void setNumberOfMaxUses(int numberOfMaxUses) {
-        this.numberOfMaxUses = numberOfMaxUses;
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 
-    public boolean getIsDefault() {
+    public int getNumeroDeUsos() {
+        return numeroDeUsos;
+    }
+
+    public void setNumeroDeUsos(int numeroDeUsos) {
+        this.numeroDeUsos = numeroDeUsos;
+    }
+
+    public boolean isDefault() {
         return isDefault;
     }
 
-    public void setDefault(boolean isDefault) {
-        this.isDefault = isDefault;
+    public void setDefault(boolean aDefault) {
+        isDefault = aDefault;
     }
 }

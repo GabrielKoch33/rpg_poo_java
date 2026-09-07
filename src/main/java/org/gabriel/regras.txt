@@ -1,43 +1,118 @@
 PERSONAGENS (HERÓIS):
-    - Todas as classes de heróis herdam os atributos da classe PersonagemBase
+    ->REGRAS:
+        - Todas as classes de heróis herdam os atributos da classe PersonagemBase
         - Provavelmente irão usar o construtor da classe pai (super)
         - Arqueiro: + velocidade de ataque;
         - Bandido: + velocidade de esquiva;
         - Feiticeiro: + resistência mágica;
         - Guerreiro: + da mais dano;
 
-    - Todas as classes de inimigos herdam os atributos da classe MonstroBase
+    -> ATRIBUTOS:
+        - life: vida
+        - defense: resistencia a ataques fisicos
+        - damage: dano base
+        - magicDefense: resistencia a ataques mágicos
+        - manna: mana é gasta em ataques mágicos
+        - buffName: nome do buff
+        - buffPercentage: o buff dá um aumento permanente em um atributo;
+        - money: dinheiro atual
+        - inventory: linkedlistset contendo todos os itens
+        - stats: objeto que contem os dados de suas estatísticas (força, velocidade etc)
+    -> MÉTODOS:
+
+
+
+
+
+PERSONAGENS (INIMIGOS):
+    ->REGRAS:
+        - Todas as classes de inimigos herdam os atributos da classe MonstroBase
         - Provavelmente irão usar o construtor da classe pai (super)
         - Lacaios: personagens sem muitas capacidades únicas
         - Brutão: mais resistência a ataques físicos, fraco a ataques mágicos
         - Mago: possuirá ataques de magia e resistência a magia elevados
         - Chefe: terá mais vida, debuffs, ataques mágicos e físicos.
 
-    - Itens
-        - O tipo de itens define se são de ataque físico ou mágico
-        - O peso define quantos slots o item ocupa
-        - O custo define o quanto ele vale em uma loja de vendas
-        - O numberOfMaxUses define quantas vezes o item pode ser usado antes de
-        excluído da mochila do jogador
-        - IsDefault define se o item pode ser vendido ou não, ademais, cada personagem
-        possui um item inicial, seja um arco, cajado, espada, adaga...
-        - Itens defaults terão uso ilimitados (basicamente durabilidade infinita)
-        - Haverá uma mecânica de descartar item, o jogador perderá o item e não
-        ganhará nenhum dinheiro em troca, apenas liberará espaço.
-        - Quando o maxUses de um item chegar a 0, o item será descartado inventário
-        liberando espaço.
+    -> ATRIBUTOS:
 
-    - Loja
-        - Lojas possuirão itens únicos.
-        - Cada item possui um preço associado, o qual será o valor de compra
+    -> MÉTODOS:
+
+
+    -
+Itens
+    ->REGRAS:
+     - O tipo do item define se são de ataque físico ou mágico
+     - O peso define quantos slots o item ocupa
+     - O custo define o quanto ele vale em uma loja de vendas
+     - O numberOfMaxUses define quantas vezes o item pode ser usado antes de
+     excluído da mochila do jogador
+     - IsDefault define se o item pode ser vendido ou não, ademais, cada personagem
+     possui um item inicial, seja um arco, cajado, espada, adaga...
+     - Itens defaults terão uso ilimitados (basicamente durabilidade infinita)
+     - Haverá uma mecânica de descartar item, o jogador perderá o item e não
+     ganhará nenhum dinheiro em troca, apenas liberará espaço.
+     - Quando o maxUses de um item chegar a 0, o item será descartado inventário
+     liberando espaço.
+
+     -> ATRIBUTOS:
+        - nome: nome do item.
+        - descricao: descrição do item.
+        - tipo: físico ou magia.
+        - peso: peso do item na mochila.
+        - preco: custo do item no momento da venda / compra.
+        - numeroDeUsos: define quantas vezes o item pode ser usado antes de esgotar completamente.
+        - isDefault: itens default não podem ser vendidos.
+
+     -> MÉTODOS:
+        - getters.
+        - setters.
+
+Loja
+    -> REGRAS:
+        - Lojas possuirão itens especiais para ajudar o jogador.
+        - Cada item possui um preço associado, o qual será o valor de compra. Comprar um item reduz a quantidade de moedas de um jogador
         - Ao adentrar a loja os itens serão exibidos
         - Ao comprar um item, o item deve sumir da loja.
-        - Haverá uma mecânica de vender itens, dessa forma o jogador pode
-        ganhar dinheiro e liberar espaço ao mesmo tempo.
+        - Haverá uma mecânica de vender itens, dessa forma o jogador pode ganhar dinheiro e liberar espaço ao mesmo tempo.
+    -> ATRIBUTOS:
+        - HashMap<Integer, Item>  // Integer será o índice do item, 'Item' exibirá seus dados
 
-    - Inventário
-        - Todo personagem irá iniciar com um inventário.
-        - Ainda pensando se o tamanho será fixo, acho que sim.
-        - Quando o peso do inventário for igual ao tamanho do mesmo, o jogador
-        não poderá comprar mais itens.
-    -
+    -> MÉTODOS:
+        - Comprar item.
+        - Vender item.
+        - Ver estoque da loja.
+        - Ver descrição item.
+
+
+Inventário
+    -> REGRAS:
+        - Todo personagem irá iniciar com um inventário de tamanho fixo (30).
+        - Quando o peso do inventário for igual a 30, o jogador não poderá comprar mais itens.
+        - Para liberar espaço: venda, descarte ou esgote um item.
+    
+    -> ATRIBUTOS:
+        - sumWeigth // calcula a soma dos pesos dos itens, serve para sabermos se está cheia ou não
+        - inventory // LinkedHashSet, de forma que os elementos sejam únicos e estejam dispostos na ordem de inserção
+
+    -> MÉTODOS:
+        - Guardar item.
+        - Descartar item.
+        - Ver inventário.
+        - Ver espaços livres.
+
+Atributos:
+    -> REGRAS:
+        - Todo personagem deve iniciar com alguma configuração de atributos.
+        - Jogadores terão uma quantidade de pontos para distribuir.
+
+    -> ATRIBUTOS:
+       - força: relacionado ao aumento do dano base;
+       - resistencia: relacionado ao aumento da defesa base;
+       - mentalidade: relacionado ao aumenta da resistencia mágica e mana;
+       - agilidade: relacionado a capacidade de atacar primeiro;
+       - carisma: relacionado ao aumento da chance de npcs te darem bons itens;
+       - sorte: relacionado ao aumento da chance de encontrar bons itens em baús e de desviar de ataques
+
+    -> MÉTODOS:
+        - incrementaAtributo: Jogador escolhe um atributo e pode inserir uma quantidade X de pontos.
+        - decrementaAtributo: faz o oposto do método anterior.
