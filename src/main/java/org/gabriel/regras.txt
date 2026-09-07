@@ -95,8 +95,9 @@ Inventário
         - Para liberar espaço: venda, descarte ou esgote um item.
     
     -> ATRIBUTOS:
-        - sumWeigth // calcula a soma dos pesos dos itens, serve para sabermos se está cheia ou não
-        - inventory // LinkedHashSet, de forma que os elementos sejam únicos e estejam dispostos na ordem de inserção
+        - pesoTotalInventario // calcula a soma dos pesos dos itens, serve para sabermos se está cheia ou não
+        - LinkedHashSet<Item> inventory // LinkedHashSet, de forma que os elementos sejam únicos e estejam dispostos na ordem de inserção
+        - tamanhoInventario // limita a quantidade de itens que se pode ter no inventário
 
     -> MÉTODOS:
         - Guardar item.
