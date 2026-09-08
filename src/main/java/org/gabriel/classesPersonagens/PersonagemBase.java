@@ -14,5 +14,13 @@ public class PersonagemBase {
     private double dinheiro;
     private Inventario inventario;
     private Atributos atributos;
+    private Cenario cenarioAtual;
+
+    enum Cenario {
+        LOJA,
+        DIALOGO,
+        COMBATE,
+        INVENTARIO,
+    }
 }
 
