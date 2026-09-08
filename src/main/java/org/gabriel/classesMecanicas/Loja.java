@@ -1,5 +1,7 @@
 package org.gabriel.classesMecanicas;
 
+import org.gabriel.classesPersonagens.PersonagemBase;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,7 +16,6 @@ public class Loja {
     public Loja() {
         this.estoque = new HashMap<>();
     }
-
     /** Java por debaixo dos panos converte int -> Integer dessa forma:<br>
      this.estoque.put(Integer.valueOf(this.ultimaChaveCriada), item);
      **/
@@ -30,16 +31,16 @@ public class Loja {
         return estoque.remove(id);
     }
 
-    public Item comprarItem(int id){
-        if (estaVazia() || !contemItem(id)){
-            return null;
-        } else {
-            return estoque.remove(id);
-            // retorna o objeto ITEM para inserirmos o item no inventário
+    public Item venderPara(PersonagemBase personagem, int id) {
+        if (!estoque.isEmpty() && estoque.containsKey(id)) {
+            Item itemComprado = estoque.get(id);
+            personagem.getInventario().guardarItem(itemComprado);
+            personagem.getDinheiro() -= itemComprado.getPreco();
         }
+        return null;
     }
 
-    public double venderItem(int id){
+    public double comprarDe(PersonagemBase personagem, Item item){
         if(){
 
         }
