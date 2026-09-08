@@ -13,26 +13,25 @@ public class Inventario {
         this.inventario = new HashMap<>();
     }
 
-    public Item guardarItem(Item item) {
+    public boolean guardarItem(Item item) {
         int espacosLivres = calculaPesoPermitidoAlocar();
         int tamanhoMaxInventario = 30;
         if (this.inventario.size() < tamanhoMaxInventario && item.getPeso() < espacosLivres) {
             this.inventario.put(this.ultimaChaveCriada, item);
             this.ultimaChaveCriada++;
             this.pesoAtual = calculaPesoAtual();
-            return item;
+            return true;
         }
-        return null;
+        return false;
     }
 
-    public Item descartarItem(int id) {
+    public boolean descartarItem(int id) {
         if (this.inventario.isEmpty() || !inventario.containsKey(id)) {
-            return null;
+            return false;
         }
-        Item itemRemovido = this.inventario.remove(id);
+        this.inventario.remove(id);
         this.pesoAtual = calculaPesoAtual();
-        return itemRemovido;
-
+        return true;
     }
 
     public int calculaPesoAtual() {

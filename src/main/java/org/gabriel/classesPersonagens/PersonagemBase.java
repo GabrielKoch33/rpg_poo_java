@@ -2,6 +2,7 @@ package org.gabriel.classesPersonagens;
 
 import org.gabriel.classesMecanicas.Atributos;
 import org.gabriel.classesMecanicas.Inventario;
+import org.gabriel.classesMecanicas.Item;
 
 public class PersonagemBase {
     private int vida;
@@ -21,6 +22,14 @@ public class PersonagemBase {
         DIALOGO,
         COMBATE,
         INVENTARIO,
+    }
+
+    public boolean guardarItem(Item item) {
+        return this.inventario.guardarItem(item);
+    }
+
+    public boolean removerItem(int id) {
+        return this.inventario.descartarItem(id);
     }
 
     public int getVida() {

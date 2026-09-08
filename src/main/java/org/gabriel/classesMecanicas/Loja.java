@@ -31,19 +31,19 @@ public class Loja {
         return estoque.remove(id);
     }
 
-    public Item venderPara(PersonagemBase personagem, int id) {
-        if (!estoque.isEmpty() && estoque.containsKey(id)) {
-            Item itemComprado = estoque.get(id);
-            personagem.getInventario().guardarItem(itemComprado);
-            personagem.getDinheiro() -= itemComprado.getPreco();
+    public boolean venderPara(PersonagemBase personagem, int id) {
+        if (!this.estoque.isEmpty() && this.estoque.containsKey(id) ) {
+            Item itemComprado = this.estoque.get(id);
+            if (personagem.guardarItem(itemComprado)) {
+                this.estoque.remove(id);
+                return true;
+            }
         }
-        return null;
+        return false;
     }
 
-    public double comprarDe(PersonagemBase personagem, Item item){
-        if(){
+    public void comprarDe(PersonagemBase personagem, int id){
 
-        }
     }
 
     public boolean estaVazia(){
