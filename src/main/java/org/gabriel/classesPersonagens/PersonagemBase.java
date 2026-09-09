@@ -4,19 +4,22 @@ import org.gabriel.classesMecanicas.Atributos;
 import org.gabriel.classesMecanicas.Inventario;
 import org.gabriel.classesMecanicas.Item;
 
+import java.awt.event.InvocationEvent;
+
 public class PersonagemBase {
-    protected int vida;
-    protected int defesa;
     protected Roles role;
-    protected int dano;
-    protected int defesaMagica;
-    protected int mana;
     protected String nomeBuff;
     protected double porcentagemBuff;
     protected double dinheiro;
     protected Inventario inventario;
     protected Atributos atributos;
     private Cenario cenarioAtual;
+
+    public PersonagemBase() {
+        this.inventario = new Inventario();
+        this.dinheiro = 50.0;
+        this.cenarioAtual = Cenario.DIALOGO;
+    }
 
     enum Cenario {
         LOJA,
@@ -40,11 +43,6 @@ public class PersonagemBase {
     }
     public void receberDinheiro(Item item) {
         this.dinheiro += item.getPreco();
-    }
-
-    public void criaAtributos() {
-        //this.atributos = new Atributos();
-        //atributos.atributosInit(role);
     }
 }
 

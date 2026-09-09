@@ -1,49 +1,69 @@
 package org.gabriel.classesMecanicas;
 
 public class Atributos {
-    private int forcaFisica;
-    private int resistenciaFisica;
-    private int mentalidade;
+    private int vitalidade;
+    private int dano;
     private int agilidade;
+    private int resistenciaFisica;
+    private int resistenciaMentalMagica;
+    private int mana;
     private int carisma;
     private int sorte;
 
-    public Atributos atributosInit(String classe) {
-        switch (classe) {
+    /** ATRIBUTO  | ESCALA: <br>
+     * vitalidade: 0 à 100 <br>
+     * dano:       0 à 100 <br>
+     * agilidade:  0 à 100 <br>
+     * resistencia física: 0 à 100 <br>
+     * resistencia mágica: 0 à 100 <br>
+     * mana:       0 à 100 <br>
+     * carisma:    0 à 10 <br>
+     * sorte:      0 à 10
+     * */
+    public Atributos() {
+        switch () {
             case "Guerreiro":
-                this.forcaFisica = 10;
-                this.resistenciaFisica = 8;
-                this.mentalidade = 5;
-                this.agilidade = 4 ;
-                this.carisma = 6;
-                this.sorte = 7;
+                this.vitalidade = 50;
+                this.dano = 30;
+                this.agilidade = 18;
+                this.resistenciaFisica = 35;
+                this.resistenciaMentalMagica = 10;
+                this.mana = 0;
+                this.carisma = 25;
+                this.sorte = 2;
                 break;
 
             case "Feiticeiro":
-                this.forcaFisica = 4;
-                this.resistenciaFisica = 6 ;
-                this.mentalidade = 10 ;
-                this.agilidade = 8;
-                this.carisma = 5;
-                this.sorte = 7 ;
+                this.vitalidade = 50;
+                this.dano = 30;
+                this.agilidade = 18;
+                this.resistenciaFisica = 35;
+                this.resistenciaMentalMagica = 10;
+                this.mana = 0;
+                this.carisma = 25;
+                this.sorte = 2;
                 break;
 
             case "Bandido":
-                this.forcaFisica = 8;
-                this.resistenciaFisica = 6 ;
-                this.mentalidade = 6;
-                this.agilidade = 7;
-                this.carisma = 10 ;
-                this.sorte = 8;
+                this.vitalidade = 50;
+                this.dano = 30;
+                this.agilidade = 18;
+                this.resistenciaFisica = 35;
+                this.resistenciaMentalMagica = 10;
+                this.mana = 0;
+                this.carisma = 25;
+                this.sorte = 2;
                 break;
 
             case "Arqueiro":
-                this.forcaFisica = 6;
-                this.resistenciaFisica = 7 ;
-                this.mentalidade = 7 ;
-                this.agilidade = 10 ;
-                this.carisma = 8;
-                this.sorte = 9;
+                this.vitalidade = 50;
+                this.dano = 30;
+                this.agilidade = 18;
+                this.resistenciaFisica = 35;
+                this.resistenciaMentalMagica = 10;
+                this.mana = 0;
+                this.carisma = 25;
+                this.sorte = 2;
                 break;
 
             default:
