@@ -20,8 +20,8 @@ public class Atributos {
      * carisma:    0 à 10 <br>
      * sorte:      0 à 10
      * */
-    public Atributos() {
-        switch () {
+    public Atributos(String role) {
+        switch (role) {
             case "Guerreiro":
                 this.vitalidade = 50;
                 this.dano = 30;
@@ -67,8 +67,8 @@ public class Atributos {
                 break;
 
             default:
-                return null;
+                break;
         }
-        return this;
+        return;
     }
 }
