@@ -31,19 +31,11 @@ public class Loja {
         return estoque.remove(id);
     }
 
-    public boolean venderPara(PersonagemBase personagem, int id) {
-        if (!this.estoque.isEmpty() && this.estoque.containsKey(id) ) {
-            Item itemComprado = this.estoque.get(id);
-            if (personagem.guardarItem(itemComprado)) {
-                this.estoque.remove(id);
-                return true;
-            }
+    public Item pegaItemDaLoja(int id) {
+        if (!estaVazia() && contemItem(id)) {
+            return estoque.get(id);
         }
-        return false;
-    }
-
-    public void comprarDe(PersonagemBase personagem, int id){
-
+        return null;
     }
 
     public boolean estaVazia(){
@@ -57,4 +49,15 @@ public class Loja {
     public Map<Integer, Item> getEstoque() {
         return estoque;
     }
+    /* na MAIN
+    * listarItens()
+    * int id = id
+    * Loja.venderItemJogador(id) -> item
+    * Inventario.temEspaco(item) -> true/false
+    * Personagem.temDinheiro(item) -> true/false
+    * Inventario.guardarItem(item) -> void
+    * Personagem.gastarDinheiro(item) -> void
+    * Loja.removerItem(id)
+    * */
+
 }
