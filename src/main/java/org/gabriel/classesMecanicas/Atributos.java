@@ -1,58 +1,54 @@
 package org.gabriel.classesMecanicas;
 
 public class Atributos {
-    private int forca;
-    private int resistencia;
+    private int forcaFisica;
+    private int resistenciaFisica;
     private int mentalidade;
     private int agilidade;
     private int carisma;
     private int sorte;
 
-    public int getForca() {
-        return forca;
-    }
+    public Atributos atributosInit(String classe) {
+        switch (classe) {
+            case "Guerreiro":
+                this.forcaFisica = 10;
+                this.resistenciaFisica = 8;
+                this.mentalidade = 5;
+                this.agilidade = 4 ;
+                this.carisma = 6;
+                this.sorte = 7;
+                break;
 
-    public void setForca(int forca) {
-        this.forca = forca;
-    }
+            case "Feiticeiro":
+                this.forcaFisica = 4;
+                this.resistenciaFisica = 6 ;
+                this.mentalidade = 10 ;
+                this.agilidade = 8;
+                this.carisma = 5;
+                this.sorte = 7 ;
+                break;
 
-    public int getResistencia() {
-        return resistencia;
-    }
+            case "Bandido":
+                this.forcaFisica = 8;
+                this.resistenciaFisica = 6 ;
+                this.mentalidade = 6;
+                this.agilidade = 7;
+                this.carisma = 10 ;
+                this.sorte = 8;
+                break;
 
-    public void setResistencia(int resistencia) {
-        this.resistencia = resistencia;
-    }
+            case "Arqueiro":
+                this.forcaFisica = 6;
+                this.resistenciaFisica = 7 ;
+                this.mentalidade = 7 ;
+                this.agilidade = 10 ;
+                this.carisma = 8;
+                this.sorte = 9;
+                break;
 
-    public int getMentalidade() {
-        return mentalidade;
-    }
-
-    public void setMentalidade(int mentalidade) {
-        this.mentalidade = mentalidade;
-    }
-
-    public int getAgilidade() {
-        return agilidade;
-    }
-
-    public void setAgilidade(int agilidade) {
-        this.agilidade = agilidade;
-    }
-
-    public int getCarisma() {
-        return carisma;
-    }
-
-    public void setCarisma(int carisma) {
-        this.carisma = carisma;
-    }
-
-    public int getSorte() {
-        return sorte;
-    }
-
-    public void setSorte(int sorte) {
-        this.sorte = sorte;
+            default:
+                return null;
+        }
+        return this;
     }
 }

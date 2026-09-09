@@ -49,15 +49,4 @@ public class Loja {
     public Map<Integer, Item> getEstoque() {
         return estoque;
     }
-    /* na MAIN
-    * listarItens()
-    * int id = id
-    * Loja.venderItemJogador(id) -> item
-    * Inventario.temEspaco(item) -> true/false
-    * Personagem.temDinheiro(item) -> true/false
-    * Inventario.guardarItem(item) -> void
-    * Personagem.gastarDinheiro(item) -> void
-    * Loja.removerItem(id)
-    * */
-
 }

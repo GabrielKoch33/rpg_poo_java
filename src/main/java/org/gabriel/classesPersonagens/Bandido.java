@@ -1,4 +1,4 @@
 package org.gabriel.classesPersonagens;
 
-public class Bandido {
+public class Bandido extends PersonagemBase{
 }

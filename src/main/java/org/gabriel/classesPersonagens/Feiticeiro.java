@@ -1,4 +1,4 @@
 package org.gabriel.classesPersonagens;
 
-public class Feiticeiro {
+public class Feiticeiro extends PersonagemBase {
 }

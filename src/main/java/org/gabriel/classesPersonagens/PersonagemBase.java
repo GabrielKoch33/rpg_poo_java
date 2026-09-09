@@ -5,16 +5,17 @@ import org.gabriel.classesMecanicas.Inventario;
 import org.gabriel.classesMecanicas.Item;
 
 public class PersonagemBase {
-    private int vida;
-    private int defesa;
-    private int dano;
-    private int defesaMagica;
-    private int mana;
-    private String nomeBuff;
-    private double porcentagemBuff;
-    private double dinheiro;
-    private Inventario inventario;
-    private Atributos atributos;
+    protected int vida;
+    protected int defesa;
+    protected Roles role;
+    protected int dano;
+    protected int defesaMagica;
+    protected int mana;
+    protected String nomeBuff;
+    protected double porcentagemBuff;
+    protected double dinheiro;
+    protected Inventario inventario;
+    protected Atributos atributos;
     private Cenario cenarioAtual;
 
     enum Cenario {
@@ -22,6 +23,12 @@ public class PersonagemBase {
         DIALOGO,
         COMBATE,
         INVENTARIO,
+    }
+    enum Roles {
+        ARQUEIRO,
+        BANDIDO,
+        FEITICEIRO,
+        GUERREIRO
     }
 
     public boolean temDinheiro(Item item) {
@@ -33,6 +40,11 @@ public class PersonagemBase {
     }
     public void receberDinheiro(Item item) {
         this.dinheiro += item.getPreco();
+    }
+
+    public void criaAtributos() {
+        //this.atributos = new Atributos();
+        //atributos.atributosInit(role);
     }
 }
 
