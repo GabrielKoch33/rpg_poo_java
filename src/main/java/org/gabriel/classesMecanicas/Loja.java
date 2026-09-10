@@ -16,6 +16,7 @@ public class Loja {
     public Loja() {
         this.estoque = new HashMap<>();
     }
+
     /** Java por debaixo dos panos converte int -> Integer dessa forma:<br>
      this.estoque.put(Integer.valueOf(this.ultimaChaveCriada), item);
      **/
@@ -24,6 +25,7 @@ public class Loja {
         this.ultimaChaveCriada++;
         return item;
     }
+
     /**Em Sets, o método '.remove()' retorna um boolean. <br>
      * Já em Maps ou Lists, o retorno é o próprio Objeto (ou null caso a chave não exista).<br>
      * O parâmetro passado para o remove é a chave, o retorno do remove() é o valor associado.**/

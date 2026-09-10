@@ -16,6 +16,7 @@ public class Item {
         this.isDefault = isDefault;
 
     }
+
     /**Caso o número de usos seja 'infinito' ou os itens não são 'defaults', utilizamos esse*/
     public Item(String nome, String descricao,String tipo, int peso, double preco){
         this.nome = nome;
