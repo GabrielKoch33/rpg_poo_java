@@ -1,7 +1,4 @@
 package org.gabriel.classesMecanicas;
-
-import org.gabriel.classesPersonagens.PersonagemBase;
-
 import java.util.HashMap;
 import java.util.Map;
 

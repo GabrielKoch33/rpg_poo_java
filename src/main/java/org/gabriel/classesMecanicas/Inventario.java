@@ -9,7 +9,7 @@ public class Inventario {
     private int ultimaChaveCriada = 1;
     private final Map<Integer, Item> inventario;
 
-    public Inventario(){
+    public Inventario() {
         this.inventario = new HashMap<>();
     }
 
@@ -44,7 +44,7 @@ public class Inventario {
 
     public int calculaPesoPermitidoAlocar() {
         int pesoMaxInventario = 25;
-        return pesoMaxInventario % calculaPesoAtual();
+        return pesoMaxInventario - calculaPesoAtual();
     }
 }
 
